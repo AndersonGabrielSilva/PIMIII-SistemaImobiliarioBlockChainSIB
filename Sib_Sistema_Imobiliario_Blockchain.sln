@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sib_Sistema_Imobiliario_Blockchain", "Sib_Sistema_Imobiliario_Blockchain\Sib_Sistema_Imobiliario_Blockchain.csproj", "{2473CCE1-35CF-48AB-96B8-7E8C50062815}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2473CCE1-35CF-48AB-96B8-7E8C50062815}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2473CCE1-35CF-48AB-96B8-7E8C50062815}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2473CCE1-35CF-48AB-96B8-7E8C50062815}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2473CCE1-35CF-48AB-96B8-7E8C50062815}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EEAAB1FF-AB59-4733-AC8B-F8085EDA1A09}
+	EndGlobalSection
+EndGlobal

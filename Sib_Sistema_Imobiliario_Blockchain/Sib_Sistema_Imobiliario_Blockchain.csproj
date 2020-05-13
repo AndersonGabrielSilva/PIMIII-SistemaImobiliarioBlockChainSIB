@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2473CCE1-35CF-48AB-96B8-7E8C50062815}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Sib_Sistema_Imobiliario_Blockchain</RootNamespace>
+    <AssemblyName>Sib_Sistema_Imobiliario_Blockchain</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dominio\Abstract\Pessoa.cs" />
+    <Compile Include="Dominio\Entidades\Cargo.cs" />
+    <Compile Include="Dominio\Entidades\ClientePessoaFisica.cs" />
+    <Compile Include="Dominio\Entidades\Endereco.cs" />
+    <Compile Include="Dominio\Entidades\Funcionario.cs" />
+    <Compile Include="Dominio\Entidades\Pessoa.cs" />
+    <Compile Include="Dominio\Entidades\Relacionamentos\Cliente_Enderecocs.cs" />
+    <Compile Include="Dominio\Entidades\Relacionamentos\Cliente_Telefone.cs" />
+    <Compile Include="Dominio\Entidades\Relacionamentos\Funcionario_Endereco.cs" />
+    <Compile Include="Dominio\Entidades\Relacionamentos\Funcionario_Telefone.cs" />
+    <Compile Include="Dominio\Entidades\Telefone.cs" />
+    <Compile Include="Dominio\Interface\ICrud.cs" />
+    <Compile Include="Infra\Contexto.cs" />
+    <Compile Include="Migrations\202005101153564_Inicial.cs" />
+    <Compile Include="Migrations\202005101153564_Inicial.designer.cs">
+      <DependentUpon>202005101153564_Inicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005101456063_AjustesFuncionario.cs" />
+    <Compile Include="Migrations\202005101456063_AjustesFuncionario.designer.cs">
+      <DependentUpon>202005101456063_AjustesFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\Dao\FuncionarioDAO.cs" />
+    <Compile Include="View\Componentes\MaskComponente.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Componentes\RoundPicture.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Telas\Blockchain\frmCadastrarTransacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Telas\Blockchain\frmCadastrarTransacao.Designer.cs">
+      <DependentUpon>frmCadastrarTransacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Telas\Consultas\frmEditarFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Telas\Consultas\frmEditarFuncionario.Designer.cs">
+      <DependentUpon>frmEditarFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Telas\Dashboard\frmBody.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Telas\Dashboard\frmBody.Designer.cs">
+      <DependentUpon>frmBody.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Telas\Imoveis\frmCadastroImovel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Telas\Imoveis\frmCadastroImovel.Designer.cs">
+      <DependentUpon>frmCadastroImovel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Telas\Cadastros\Formularios\frmCadastroCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Telas\Cadastros\Formularios\frmCadastroCliente.Designer.cs">
+      <DependentUpon>frmCadastroCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Telas\Cadastros\Formularios\frmCadastroFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Telas\Cadastros\Formularios\frmCadastroFuncionario.Designer.cs">
+      <DependentUpon>frmCadastroFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Telas\Cadastros\frmCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Telas\Cadastros\frmCliente.Designer.cs">
+      <DependentUpon>frmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Telas\Cadastros\frmFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Telas\Cadastros\frmFuncionario.Designer.cs">
+      <DependentUpon>frmFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Telas\Carregamento\frmCarregamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Telas\Carregamento\frmCarregamento.Designer.cs">
+      <DependentUpon>frmCarregamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Componentes\GradientPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Telas\Imoveis\frmPortfolioImovel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Telas\Imoveis\frmPortfolioImovel.Designer.cs">
+      <DependentUpon>frmPortfolioImovel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Telas\Login\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Telas\Login\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Telas\Dashboard\frmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Telas\Dashboard\frmDashboard.Designer.cs">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Componentes\MenuDropDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="Migrations\202005101153564_Inicial.resx">
+      <DependentUpon>202005101153564_Inicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005101456063_AjustesFuncionario.resx">
+      <DependentUpon>202005101456063_AjustesFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Telas\Blockchain\frmCadastrarTransacao.resx">
+      <DependentUpon>frmCadastrarTransacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Telas\Consultas\frmEditarFuncionario.resx">
+      <DependentUpon>frmEditarFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Telas\Dashboard\frmBody.resx">
+      <DependentUpon>frmBody.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Telas\Imoveis\frmCadastroImovel.resx">
+      <DependentUpon>frmCadastroImovel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Telas\Cadastros\Formularios\frmCadastroCliente.resx">
+      <DependentUpon>frmCadastroCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Telas\Cadastros\Formularios\frmCadastroFuncionario.resx">
+      <DependentUpon>frmCadastroFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Telas\Cadastros\frmCliente.resx">
+      <DependentUpon>frmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Telas\Cadastros\frmFuncionario.resx">
+      <DependentUpon>frmFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Telas\Carregamento\frmCarregamento.resx">
+      <DependentUpon>frmCarregamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="View\Telas\Imoveis\frmPortfolioImovel.resx">
+      <DependentUpon>frmPortfolioImovel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Telas\Login\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Telas\Dashboard\frmDashboard.resx">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Regra\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imgs\WhatsApp Image 2020-05-09 at 02.22.31.jpeg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este projeto faz referência a pacotes do NuGet que não estão presentes neste computador. Use a Restauração de Pacotes do NuGet para baixá-los.  Para obter mais informações, consulte http://go.microsoft.com/fwlink/?LinkID=322105. O arquivo ausente é {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" />
+</Project>
